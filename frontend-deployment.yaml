@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediawiki-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediawiki-frontend
+  template:
+    metadata:
+      labels:
+        app: mediawiki-frontend
+    spec:
+      containers:
+      - name: mediawiki-frontend
+        image: acrdci1tw001.azurecr.io/tw/mediawiki:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+          - name: port80 
+            containerPort: 80
