@@ -10,7 +10,7 @@ RUN apt-get -y install php-json
 RUN apt-get install -y vim
 
 WORKDIR /var/www/html
-RUN wget https://releases.wikimedia.org/mediawiki/1.37/mediawiki-1.37.2.tar.gz
+RUN wget https://releases.wikimedia.org/mediawiki/1.37/mediawiki-1.37.0.tar.gz
 
 RUN tar -xvzf /var/www/html/mediawiki-*.tar.gz
 RUN mkdir /var/lib/mediawiki && mv mediawiki-*/* /var/lib/mediawiki

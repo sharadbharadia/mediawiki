@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mediawiki-backend
-        image: "mysql"
+        image: mysql
         ports:
         - name: tcp
           containerPort: 3306
